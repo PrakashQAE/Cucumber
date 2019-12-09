@@ -1,5 +1,7 @@
 package utils;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class T24wrapper {
 
     public static T24wrapper t24wrapper; 
-    public static RemoteWebDriver driver;    
+    public static WebDriver driver;    
     public static WebDriverWait waitDriver;
     public final static int TIMEOUT = 30;
     public final static int PAGE_LOAD_TIMEOUT = 50;
@@ -32,7 +34,7 @@ public class T24wrapper {
         driver.get(url);
     }
 
-    public static RemoteWebDriver getDriver() {
+    public static WebDriver getDriver() {
     	
         return driver;
     }
